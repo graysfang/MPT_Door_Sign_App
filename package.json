@@ -1,0 +1,15 @@
+{
+  "name": "star-doorsign-app",
+  "version": "1.0.0",
+  "description": "Door sign generator for MPT - STAR Center",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Nicholas Perez",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^3.0.3",
+    "jsonfile": "^5.0.0"
+  }
+}
