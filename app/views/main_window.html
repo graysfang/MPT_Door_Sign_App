@@ -1,86 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>STAR Center - Door Signs</title>
+<head>
+    <meta charset="UTF-8">
+    <title>MPT - STAR Center Door Signs</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+</head>
     <body>
         <div id="container-grid">
-            <div id="header-grid">
-                <div>
-                    STAR Center Door Signs
+            <div id="top-bar-grid">
+                <div id="title-box">
+                    MPT - STAR Center Door Signs
                 </div>
-                <div id="min-btn" class="windowsButtons">
-                    <i class="far fa-window-minimize"></i>
+                <div id="min-btn" class="topBarButtons">
+                    <i class="fas fa-minus"></i>
                 </div>
-                <div id="close-btn" class="windowsButtons">
-                    <i class="far fa-window-close"></i>
+                <div id="close-btn" class="topBarButtons">
+                    <i class="fas fa-times"></i>
                 </div>
+
             </div>
             <div id="body-grid">
-                <div id="list-panel">
-
-                    <!--<div class="row-style">-->
-                    <!--<div class="placeholder-color">-->
-                    <!--MON-->
-                    <!--</div>-->
-                    <!--<div class="placeholder-color">-->
-                    <!--Preschool-->
-                    <!--</div>-->
-                    <!--<div class="placeholder-color">-->
-                    <!--9:00AM - 12:00PM-->
-                    <!--</div>-->
-                    <!--<div class="placeholder-color">-->
-                    <!--TT-->
-                    <!--</div>-->
-                    <!--</div>-->
-
+                <div id="dotw-panel">
+                    <div id="mon-tab" class="dotwPanelButton">
+                        MON
+                    </div>
+                    <div id="tue-tab" class="dotwPanelButton">
+                        TUE
+                    </div>
+                    <div id="wed-tab" class="dotwPanelButton">
+                        WED
+                    </div>
+                    <div id="thu-tab" class="dotwPanelButton">
+                        THU
+                    </div>
+                    <div id="fri-tab" class="dotwPanelButton">
+                        FRI
+                    </div>
+                    <div id="sat-tab" class="dotwPanelButton">
+                        SAT
+                    </div>
+                    <div id="sun-tab" class="dotwPanelButton">
+                        SUN
+                    </div>
                 </div>
-                <div id="tools-panel">
-                    <div id="tool-button-box">
-                        <div id="new-event-button" class="toolButtonStyle">
-                            <i class="far fa-plus-square"></i>
-                        </div>
-                        <div id="delete-event-button" class="toolButtonStyle">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                        <div id="save-event-button" class="toolButtonStyle">
-                            <i class="far fa-save"></i>
-                        </div>
+                <div id="list-panel">
+                    <div class="listRowDiv">
+                        <div>T T</div>
+                        <div>Preschool</div>
+                        <div>9:00AM</div>
+                        <div>-</div>
+                        <div>12:00PM</div>
                     </div>
-                    <div id="input-box">
-                        <div id="dotw-box">
+                    <div class="listRowDiv">
+                        <div>T T</div>
+                        <div>Theater 101</div>
+                        <div>6:00PM</div>
+                        <div>-</div>
+                        <div>7:30PM</div>
+                    </div>
+                </div>
+                <div id="form-panel">
+                    <div id="event-title-box">
+                        <label for="title-input">Event Title</label>
+                        <br>
+                        <input type="text" id="title-input">
+                    </div>
+                    <div id="time-box">
+                        <div>
+                            <label for="start-time-input">Start Time:</label>
+                            <input type="time" name="" id="start-time-input">
+                        </div>
+                        <div>
+                            <label for="end-time-input">End Time:</label>
+                            <input type="time" name="" id="end-time-input">
 
                         </div>
-                        <div id="title-box">
-                            <label for="title">Event Title</label>
+                    </div>
+                    <div id="dotw-room-input-panel">
+                        <div>
+                            <div>
+                                <input type="checkbox" name="mon" id="mon">
+                                <label for="mon">Monday</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="tue" id="tue">
+                                <label for="tue">Tuesday</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="wed" id="wed">
+                                <label for="wed">Wednesday</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="thu" id="thu">
+                                <label for="thu">Thursday</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="fri" id="fri">
+                                <label for="fri">Friday</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="sat" id="sat">
+                                <label for="sat">Saturday</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="sun" id="sun">
+                                <label for="sun">Sunday</label>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="tt" id="tt">
+                                <label for="tt">Tot Trek</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="zp" id="zp">
+                                <label for="zp">Zip</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="zm" id="zm">
+                                <label for="zm">Zoom</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="ds" id="ds">
+                                <label for="ds">Discover Space</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jn" id="jn">
+                                <label for="jn">Journey North</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="js" id="js">
+                                <label for="js">Journey South</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="vs" id="vs">
+                                <label for="vs">Voyage Studio</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="vk" id="vk">
+                                <label for="vk">Venture Kitchen</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tools-panel">
+                        <div>
+                            <i class="fas fa-plus"></i>
                             <br>
-                            <input title="Title" type="text" name="title" id="title">
-
+                            New
                         </div>
-                        <div id="time-box">
-                            <input title="Start Time" id="start-time" type="time">
-                            <input title="End Time" id="end-time" type="time">
-                            <!--<button id="test-time">Test</button>-->
+                        <div>
+                            <i class="fas fa-save"></i>
+                            <br>
+                            Save
                         </div>
-                        <div id="room-box">
-
-                        </div>
-                        <div id="default-box">
-                            <i class="far fa-check-square"></i>
-                            <i class="fas fa-check-square"></i>
-                        </div>
-                        <div id="print-box">
-                            Print
+                        <div>
+                            <i class="fas fa-trash-alt"></i>
+                            <br>
+                            Delete
                         </div>
                     </div>
-
+                    <div id="repeat-box">
+                        <input type="checkbox" name="repeat" id="repeat">
+                        <label for="repeat"><i class="far fa-calendar-check"></i></i> Repeat Weekly</label>
+                    </div>
+                    <div>
+                        <div id="print-btn">
+                            PRINT
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <script src="../js/app.js" ></script>
     </body>
-    <script src="../js/app.js" ></script>
 </html>

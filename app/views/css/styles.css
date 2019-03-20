@@ -1,85 +1,186 @@
+:root{
+    --dark-color: #455A64;
+    --button-color: #26c6da;
+    --button-color-hover: #00acc1;
+}
+
 body{
     font-family: 'Lato', sans-serif;
+    background-color: #f2f2f2;
     margin: 0;
-
 }
-.windowsButtons{
-    text-align: center;
-    cursor: pointer;
-    -webkit-app-region: no-drag;
-}
-.windowsButtons:hover{
-    color: #3498db;
+input{
+    border: none;
 }
 
 #container-grid{
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 30px 1fr;
-    width: 1100px;
-    margin: auto;
-    color: #e57e25;
-    height: 600px;
+    grid-template-rows: 33px 1fr;
 }
-#header-grid{
+
+#top-bar-grid{
     display: grid;
-    grid-template-columns: 1fr 20px 20px;
-    grid-gap: 10px;
-    padding: 5px;
-    -webkit-app-region: drag
+    grid-template-columns: 1fr repeat(2, 35px);
+    background-color: var(--dark-color);
+    color: #ffffff;
+    cursor: pointer;
+
 }
+
+.topBarButtons:hover{
+    color: var(--button-color);
+}
+#title-box{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    -webkit-app-region: drag;
+}
+.topBarButtons{
+    margin: auto;
+    font-size: larger;
+}
+
 #body-grid{
     display: grid;
-    grid-template-columns: 800px 300px;
-}
-#list-panel{
-    display: grid;
-    grid-template-columns: 1fr;
-    overflow-y: scroll;
-    grid-gap: 1px;
-    grid-template-rows: 40px;
-    /*scrollbar width 17px*/
-    height: 100%;
-}
+    grid-template-columns: 100px 700px 300px;
+    -webkit-app-region: no-drag;
 
-#input-box{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 5px;
 }
-.row-style{
+#dotw-panel{
     display: grid;
-    grid-gap: 1px;
-    grid-template-columns: 75px 400px 255px 50px;
-    font-size: 1.5em;
+    grid-template-rows: repeat(7, 1fr);
+}
+#dotw-panel div{
+    width: auto;
+    height: auto;
+    background-color: var(--button-color);
+    color: #fff;
     text-align: center;
-    height: 40px;
-}
-.placeholder-color{
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 5px;
-}
-#tool-button-box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 2.5em;
-    text-align: center;
-}
-.toolButtonStyle{
-    padding: 5px;
+    padding-top: 30px;
+    font-weight: bolder;
     cursor: pointer;
 }
-.toolButtonStyle:hover{
-    color: #3498db;
+#dotw-panel div:hover{
+    background-color: var(--button-color-hover);
 }
 
-::-webkit-scrollbar{
-    background-color: #fff;
-    /* 1 */
+/*LIST PANEL*/
+#list-panel{
+    overflow-y: scroll;
+    height: 567px;
+    display: grid;
+    grid-auto-rows: 35px;
+}
+.listRowDiv{
+    height: 35px;
+    background-color: var(--button-color-hover);
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 50px 440px 90px 10px 90px;
+    text-align: center;
+    font-weight: bold;
+}
+.listRowDiv div{
+    margin-top: 6px;
+}
+.listRowDiv:nth-child(even){
+    background-color: var(--button-color);
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: #e57e25;
-    /* 5 */
+#form-panel{
+    background-color: var(--dark-color);
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr;
+    user-select: none;
+
+}
+
+#event-title-box{
+    width: 85%;
+    margin: auto;
+
+}
+#title-input{
+    width: 100%;
+}
+
+#time-box{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 8%;
+
+}
+#time-box div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+#dotw-room-input-panel{
+    display: grid;
+    grid-template-columns: 115px 145px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#tools-panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin: auto;
+}
+#tools-panel div{
+    width: 100px;
+    font-size: x-large;
+    cursor: pointer;
+}
+#tools-panel div:hover{
+    color: var(--button-color);
+}
+#repeat-box{
+    text-align: center;
+    font-size: x-large;
+    margin: auto;
+
+}
+#repeat{
+    position: absolute;
+    top: -1000px;
+}
+#repeat:checked + label{
+    text-decoration: underline var(--button-color);
+}
+#form-panel label{
+    cursor: pointer;
+}
+#form-panel input{
+    cursor: pointer;
+}
+#repeat-box:hover{
+    color: var(--button-color);
+}
+
+#print-btn{
+    background: var(--button-color);
+    height: 50px;
+    width: 85%;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    padding-top: 8px;
+    cursor: pointer;
+}
+#print-btn:hover{
+    background-color: var(--button-color-hover);
+}
+
+/*DOTW Panel*/
+.dotwSelected{
+    background-color: var(--button-color-hover);
 }
